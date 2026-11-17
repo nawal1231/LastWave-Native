@@ -33,11 +33,9 @@ Java_com_lastwave_app_playback_automix_engine_SpectralCrossoverAudioProcessor_na
     gCrossover = std::make_unique<automix::SpectralDeckCrossover>();
     gCrossover->init(gSampleRate);
 
-    gStretcherAlpha = std::make_unique<automix::TransientPreservingStretcher>();
-    gStretcherAlpha->init(gSampleRate, 2);
+    gStretcherAlpha = std::make_unique<automix::TransientPreservingStretcher>(gSampleRate, 2);
 
-    gStretcherBeta = std::make_unique<automix::TransientPreservingStretcher>();
-    gStretcherBeta->init(gSampleRate, 2);
+    gStretcherBeta = std::make_unique<automix::TransientPreservingStretcher>(gSampleRate, 2);
 
     gLufsNormalizer = std::make_unique<automix::LufsContourNormalizer>();
     gLufsNormalizer->init(gSampleRate);

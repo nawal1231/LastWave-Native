@@ -10,7 +10,7 @@ namespace automix {
 // Phase-locked, transient-preserving time stretcher using overlap-add (WSOLA)
 class TransientPreservingStretcher {
 public:
-    TransientPreservingStretcher();
+    TransientPreservingStretcher(float sampleRate = 44100.0f, int channels = 2);
     void init(float sampleRate, int channels = 2);
     void reset();
 

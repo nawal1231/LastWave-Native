@@ -4,8 +4,8 @@ namespace automix {
 
 static constexpr float PI_F = 3.14159265358979323846f;
 
-TransientPreservingStretcher::TransientPreservingStretcher() {
-    init(44100.0f, 2);
+TransientPreservingStretcher::TransientPreservingStretcher(float sampleRate, int channels) {
+    init(sampleRate, channels);
 }
 
 void TransientPreservingStretcher::init(float sampleRate, int channels) {
